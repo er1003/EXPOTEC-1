@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="EuTeDesafio.css" />
+    <title>Eu Te Desafio: um desafio novo por dia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo">Eu Te Desafio</div>
+        <div class="stats">
+          <span id="streak">🔥 0 dias</span><span id="pts">⭐ 0 pts</span>
+        </div>
+      </header>
+      <h1>Eu te desafio!</h1>
+      <p class="lead">
+        Todo dia, um desafio novo para sair da zona de conforto, rir de si mesmo
+        e se superar. Aceita ou amarela?
+      </p>
+
+      <section class="card" aria-live="polite">
+        <div class="pts" id="cp">+10</div>
+        <span class="tag" id="ct">Corpo</span>
+        <h2 id="ch">…</h2>
+        <p id="cd"></p>
+        <div class="row">
+          <button class="go" id="accept">Aceito o desafio!</button>
+          <button class="alt" id="swap">Troco por outro</button>
+        </div>
+      </section>
+      <div id="msg" role="status"></div>
+
+      <section class="moment">
+        <h3>Mostre seu momento</h3>
+        <p>
+          Tire uma foto fazendo o desafio e a gente monta um cartão para você
+          compartilhar. A foto fica só no seu aparelho.
+        </p>
+        <input type="file" id="file" accept="image/*" hidden />
+        <button id="pick">📷 Tirar ou escolher foto</button>
+        <div id="prev">
+          <img id="out" alt="Cartão do seu desafio com a sua foto" />
+          <div class="row">
+            <button id="sh">Compartilhar</button
+            ><button id="pub" style="display: none">Publicar no mural</button
+            ><button class="sec" id="pick2">Trocar foto</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="mod">
+        <h3>Moderação</h3>
+        <div class="mbar">
+          <span
+            >Fotos aguardando aprovação. Só administradores veem esta
+            área.</span
+          >
+        </div>
+        <div class="mbar">
+          <button id="scan">Analisar com Claude</button
+          ><button id="okall">Aprovar as que parecem seguras</button>
+        </div>
+        <p id="pempty">Nenhuma foto aguardando.</p>
+        <div id="plist"></div>
+      </section>
+
+      <section id="mural">
+        <h3>Mural dos desafiantes</h3>
+        <div class="mbar">
+          <span
+            >Cartões de quem aceitou o desafio. Publique o seu e apareça
+            aqui.</span
+          ><button id="rm">Pedir remoção do meu cartão</button>
+        </div>
+        <p id="empty">
+          Ainda não há cartões. Seja a primeira pessoa a publicar o seu.
+        </p>
+        <div id="grid"></div>
+      </section>
+
+      <h3>Sua semana</h3>
+      <div class="week" id="week"></div>
+
+      <h3>Cinco jeitos de se superar</h3>
+      <div class="cats">
+        <div class="cat"><b>Corpo</b><small>Mexa-se sem desculpa</small></div>
+        <div class="cat"><b>Mente</b><small>Treine o cérebro</small></div>
+        <div class="cat">
+          <b>Coragem</b><small>Faça o que dá frio na barriga</small>
+        </div>
+        <div class="cat">
+          <b>Criatividade</b><small>Invente, rabisque, cante</small>
+        </div>
+        <div class="cat">
+          <b>Brincadeira</b><small>Para fazer com quem você ama</small>
+        </div>
+      </div>
+
+      <h3>Desafie um amigo</h3>
+      <div class="friend">
+        <p>
+          Gostou do desafio de hoje? Mande para alguém com um “eu te desafio”.
+        </p>
+        <button id="share">Copiar convite</button>
+      </div>
+
+      <footer>
+        Desafios originais, criados no espírito divertido do livro “Eu Duvido”,
+        de Giuliana Mafra. Respeite seus limites e faça tudo com segurança.<br /><br />
+        <button id="reset">Zerar meu progresso</button>
+      </footer>
+    </div>
+    <script src="EuTeDesafio.js"></script>
+  </body>
+</html>
